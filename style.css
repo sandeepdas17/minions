@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&family=Roboto+Mono:wght@400;600&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --bg-color: rgba(204, 227, 240, 0.5);
+  --border-color: rgb(52, 133, 6);
+}
+body {
+  /* font-family: 'Roboto Mono', sans-serif;*/
+  font-family: 'Quicksand', sans-serif;
+  background: url(Minions.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  animation: fromleft 1.5s ease-out;
+  height: 100vh;
+}
+h2,
+h3 {
+  text-align: center;
+  margin-top: 3rem;
+  color: white;
+}
+
+textarea {
+  width: 40%;
+  height: 20vh;
+  display: block;
+  margin: 3rem auto;
+  border-radius: 2rem;
+  padding: 1rem;
+  border: 0.15rem solid var(--border-color);
+  background-color: var(--bg-color);
+  color: rgb(0, 0, 0);
+  font-size: 1.2rem;
+  font-weight: bold;
+  outline: none;
+}
+textarea:hover {
+  animation: fromBottom 0.4s ease-in;
+}
+#btn-translate {
+  background-color: var(--bg-color);
+  border-radius: 2rem;
+  color: rgb(32, 114, 29);
+  box-sizing: border-box;
+  padding: 0.5rem 1rem;
+  margin: 1rem auto;
+  display: block;
+  border: 0.15rem solid var(--border-color);
+}
+#btn-translate:hover {
+  transform: scale(1.2);
+}
+
+#txt-output {
+  width: 40%;
+  height: 20vh;
+  border-radius: 2rem;
+  border: 0.15rem solid var(--border-color);
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: var(--bg-color);
+  color: rgb(0, 0, 0);
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+#txt-output:hover {
+  animation: fromLeftRight 0.5s ease-out;
+}
+
+@keyframes fromleft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  50% {
+    transform: translate(15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes fromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  50% {
+    transform: translateY(2px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+@keyframes fromLeftRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  50% {
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
